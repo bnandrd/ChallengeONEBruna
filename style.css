@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box; /*para que os elementos fiquem todos no mesmo limite de borda em todos os lados. achei na documentação! */
+}
+
+body {
+    height: 100%; 
+    margin: 0; 
+    font-family: "Cedarville Cursive", cursive; /*penso que combina com a estética bruxesca que eu quis incorporar */
+    background-color: #985fba; /*esquema de cores do color-hex! */
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+.titulo {
+    font-family: "Cedarville Cursive", cursive; /*penso que combina com a estética bruxesca que eu quis incorporar */
+    font-size: 50px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    background-color: #190033;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 20px auto; 
+    gap: 35px; 
+    box-sizing: border-box; 
+}
+
+.left {
+    flex: 0 1 40%; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px; 
+}
+
+.left .buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+textarea {
+    font-family: "Biryani", sans-serif;
+    width: 100%; 
+    height: 200px;
+    padding: 15px;
+    resize: none;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+button {
+    font-family: "Biryani", sans-serif;
+    background-color: #558f83;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.right {
+    flex: 0 1 60%; 
+    font-family: "Biryani", sans-serif;
+    background-color: #66899c;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 30px; 
+    box-sizing: border-box; 
+}
+
+.imagem {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.resultado {
+    font-family: "Biryani", sans-serif;
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.observacao {
+    font-family: "Biryani", sans-serif;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.rodape {
+    font-family: "Cedarville Cursive", cursive; /*penso que combina com a estética bruxesca que eu quis incorporar */
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    background-color: #5c3170;
+    width: 100%;
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 60px; 
+}

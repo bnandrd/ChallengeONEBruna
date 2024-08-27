@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALLENGE ONE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Cedarville+Cursive&family=Nanum+Gothic:wght@400;700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="titulo">Challenge de Feitiçaria - Encriptador de Textos!</h1>
+        <div class="container">
+            <div class="left">
+                <textarea id="inputTexto" placeholder="Deposite seu segredo e eu o guardarei ou o revelarei..."></textarea>
+                <p class="observacao">Por favor, não utilize letras maiúsculas ou acentos. Isso confunde a minha magia! Para enfeitiçar, clique no botão esquerdo. Para desenfeitiçar, clique no direito.</p>
+                <div class="buttons-container">
+                    <button onclick="criptografar()">RAIO ENCRIPTADOR</button>
+                    <button onclick="descriptografar()">RAIO DESENCRIPTADOR</button>
+                </div>
+            </div>
+            <div class="right">
+                <img src="img1.jpg" alt="Imagem Descritiva" class="imagem">
+                <div class="resultado" id="resultado">Aqui aparece a magia!</div>
+            </div>
+        </div>
+    </div>
+    <footer class="rodape">
+        Feito por Bruna Andrade, candidata do programa Oracle ONE e entusiasta de programação!
+    </footer>
+
+    <script>
+        function criptografar() {
+            let texto = document.getElementById("inputTexto").value;
+            let textoCriptografado = texto
+                .replace(/e/g, "enter")
+                .replace(/i/g, "imes")
+                .replace(/a/g, "ai")
+                .replace(/o/g, "ober")
+                .replace(/u/g, "ufat");
+            document.getElementById("resultado").innerText = textoCriptografado;
+        }
+
+        function descriptografar() {
+            let texto = document.getElementById("inputTexto").value;
+            let textoDescriptografado = texto
+                .replace(/enter/g, "e")
+                .replace(/imes/g, "i")
+                .replace(/ai/g, "a")
+                .replace(/ober/g, "o")
+                .replace(/ufat/g, "u");
+            document.getElementById("resultado").innerText = textoDescriptografado;
+        }
+    </script>
+</body>
+</html>
